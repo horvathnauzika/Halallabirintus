@@ -14,11 +14,22 @@ import javax.swing.JOptionPane;
  */
 public class Halallabirintus extends javax.swing.JFrame {
 
+    private int ugyesseg;
+    private int min = 1;
+    private int max = 6;
+    private int eletero;
+    private int szerencse;
+    private int randomszam = (int)(Math.random()*(max - min +1))+min;
+
     /**
      * Creates new form Halallabirintus
      */
     public Halallabirintus() {
+        this.szerencse = randomszam + 6;
+        this.eletero = 12 + randomszam + randomszam;
+        this.ugyesseg = 6 + randomszam;
         initComponents();
+        
     }
 
     /**
@@ -33,17 +44,17 @@ public class Halallabirintus extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        jatekkezdese = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        kilepeskezdolap = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        tovabbkaraktervalasztas = new javax.swing.JButton();
+        ferfigomb = new javax.swing.JButton();
         jLabel37 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
+        noigomb = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
@@ -58,15 +69,15 @@ public class Halallabirintus extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        taskatartalmakepessegek = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton8 = new javax.swing.JButton();
+        textareakepessegek = new javax.swing.JTextArea();
+        tovabbkepessegek = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        rdbtn66 = new javax.swing.JRadioButton();
+        rdbtn270 = new javax.swing.JRadioButton();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
@@ -78,14 +89,14 @@ public class Halallabirintus extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        taskatartalmajatekfolytatasa = new javax.swing.JTextArea();
         jPanel10 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        ajtovalasztas = new javax.swing.JTextArea();
         jLabel20 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        rdbtn56 = new javax.swing.JRadioButton();
+        rdbtn293 = new javax.swing.JRadioButton();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
@@ -97,14 +108,14 @@ public class Halallabirintus extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
+        taskatartalma293ajto = new javax.swing.JTextArea();
         jPanel15 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
+        textarea293ajto = new javax.swing.JTextArea();
         jLabel28 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        rdbtn387 = new javax.swing.JRadioButton();
+        rdbtn137 = new javax.swing.JRadioButton();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -116,22 +127,40 @@ public class Halallabirintus extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea7 = new javax.swing.JTextArea();
+        taskatartalma56 = new javax.swing.JTextArea();
         jPanel20 = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea8 = new javax.swing.JTextArea();
+        textarea56ajto = new javax.swing.JTextArea();
         jLabel36 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        rdbtn215 = new javax.swing.JRadioButton();
+        rdbtn373 = new javax.swing.JRadioButton();
         jPanel23 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        visszakezdolapra137 = new javax.swing.JButton();
+        kilepes137 = new javax.swing.JButton();
+        jPanel27 = new javax.swing.JPanel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        textarea137ajto = new javax.swing.JTextArea();
         jPanel24 = new javax.swing.JPanel();
+        jPanel30 = new javax.swing.JPanel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        textarea387ajto = new javax.swing.JTextArea();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        textarea387ajto2 = new javax.swing.JTextArea();
+        visszakezdolapra387 = new javax.swing.JButton();
+        kilepes387 = new javax.swing.JButton();
         jPanel25 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        textarea373ajto = new javax.swing.JTextArea();
+        visszakezdolapra373 = new javax.swing.JButton();
+        kilepes373 = new javax.swing.JButton();
         jPanel26 = new javax.swing.JPanel();
+        jPanel29 = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        textarea215ajto = new javax.swing.JTextArea();
+        visszakezdolapra215 = new javax.swing.JButton();
+        kilepes215 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -147,10 +176,10 @@ public class Halallabirintus extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Játék kezdése");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jatekkezdese.setText("Játék kezdése");
+        jatekkezdese.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jatekkezdeseActionPerformed(evt);
             }
         });
 
@@ -159,10 +188,10 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/halallabirintus/kezdokep.jpg"))); // NOI18N
 
-        jButton1.setText("Kilépés");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        kilepeskezdolap.setText("Kilépés");
+        kilepeskezdolap.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                kilepeskezdolapMouseClicked(evt);
             }
         });
 
@@ -177,9 +206,9 @@ public class Halallabirintus extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(kilepeskezdolap)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 325, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(jatekkezdese)
                         .addGap(16, 16, 16))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -195,30 +224,25 @@ public class Halallabirintus extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(kilepeskezdolap)
+                    .addComponent(jatekkezdese))
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Kezdőlap", jPanel1);
 
-        jButton5.setText("Tovább");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        tovabbkaraktervalasztas.setText("Tovább");
+        tovabbkaraktervalasztas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                tovabbkaraktervalasztasActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Férfi");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
+        ferfigomb.setText("Férfi");
 
         jLabel37.setText("Válaszd ki a karaktered!");
 
-        jButton7.setText("Nő");
+        noigomb.setText("Nő");
 
         jLabel4.setText("Karaktered neve: ");
 
@@ -232,9 +256,9 @@ public class Halallabirintus extends javax.swing.JFrame {
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ferfigomb, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(noigomb, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(97, 97, 97))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -244,7 +268,7 @@ public class Halallabirintus extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5))
+                        .addComponent(tovabbkaraktervalasztas))
                     .addGroup(jPanel22Layout.createSequentialGroup()
                         .addContainerGap(32, Short.MAX_VALUE)
                         .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,13 +298,13 @@ public class Halallabirintus extends javax.swing.JFrame {
                     .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton6))
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(noigomb)
+                    .addComponent(ferfigomb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5)
+                    .addComponent(tovabbkaraktervalasztas)
                     .addComponent(jLabel4))
                 .addGap(29, 29, 29))
         );
@@ -320,9 +344,9 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        taskatartalmakepessegek.setColumns(20);
+        taskatartalmakepessegek.setRows(5);
+        jScrollPane2.setViewportView(taskatartalmakepessegek);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -342,33 +366,33 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Egy versenyre nevezel, aminek a lényege, \nhogy át kell kelni a halállabirintuson. \nA labirintusban tárgyakat találhatsz és \nszörnyekkel kell harcoljál.");
-        jScrollPane1.setViewportView(jTextArea1);
+        textareakepessegek.setColumns(20);
+        textareakepessegek.setRows(5);
+        textareakepessegek.setText("Egy versenyre nevezel, aminek a lényege, \nhogy át kell kelni a halállabirintuson. \nA labirintusban tárgyakat találhatsz és \nszörnyekkel kell harcoljál.");
+        jScrollPane1.setViewportView(textareakepessegek);
 
-        jButton8.setText("Tovább");
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+        tovabbkepessegek.setText("Tovább");
+        tovabbkepessegek.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
+                tovabbkepessegekMouseClicked(evt);
             }
         });
 
         jLabel12.setText("Választásod: ");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("66-os ajtó");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn66);
+        rdbtn66.setText("66-os ajtó");
+        rdbtn66.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                rdbtn66ActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("270-es ajtó");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn270);
+        rdbtn270.setText("270-es ajtó");
+        rdbtn270.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rdbtn270ActionPerformed(evt);
             }
         });
 
@@ -379,17 +403,17 @@ public class Halallabirintus extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(rdbtn270)
+                    .addComponent(rdbtn66))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton1)
+                .addComponent(rdbtn270)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton2)
+                .addComponent(rdbtn66)
                 .addContainerGap())
         );
 
@@ -406,7 +430,7 @@ public class Halallabirintus extends javax.swing.JFrame {
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton8)
+                        .addComponent(tovabbkepessegek)
                         .addGap(13, 13, 13))))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
@@ -422,7 +446,7 @@ public class Halallabirintus extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8)
+                .addComponent(tovabbkepessegek)
                 .addContainerGap())
         );
 
@@ -501,9 +525,9 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        taskatartalmajatekfolytatasa.setColumns(20);
+        taskatartalmajatekfolytatasa.setRows(5);
+        jScrollPane3.setViewportView(taskatartalmajatekfolytatasa);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -523,26 +547,26 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jTextArea4.setText("Válassz egy ajtót!");
-        jScrollPane4.setViewportView(jTextArea4);
+        ajtovalasztas.setColumns(20);
+        ajtovalasztas.setRows(5);
+        ajtovalasztas.setText("Válassz egy ajtót!");
+        jScrollPane4.setViewportView(ajtovalasztas);
 
         jLabel20.setText("Választásod: ");
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("56-os ajtó");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn56);
+        rdbtn56.setText("56-os ajtó");
+        rdbtn56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rdbtn56ActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("293-as ajtó");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn293);
+        rdbtn293.setText("293-as ajtó");
+        rdbtn293.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                rdbtn293ActionPerformed(evt);
             }
         });
 
@@ -553,17 +577,17 @@ public class Halallabirintus extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton3))
+                    .addComponent(rdbtn293)
+                    .addComponent(rdbtn56))
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton4)
+                .addComponent(rdbtn293)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton3)
+                .addComponent(rdbtn56)
                 .addContainerGap())
         );
 
@@ -691,9 +715,9 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jScrollPane5.setViewportView(jTextArea5);
+        taskatartalma293ajto.setColumns(20);
+        taskatartalma293ajto.setRows(5);
+        jScrollPane5.setViewportView(taskatartalma293ajto);
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -713,26 +737,26 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setRows(5);
-        jTextArea6.setText("A három pár nedves lábnyomot követve\n az alagútnyugati elágazásában hamarosan \negy újabb el-ágazáshoz érsz. Ha továbbmész \nnyugat felé a lábnyomokat követve, nyisd ki a\n137-es ajtót. Ha inkább észak felé mész a \nharmadik pár lábnyom után, nyisd ki a \n387-est..");
-        jScrollPane6.setViewportView(jTextArea6);
+        textarea293ajto.setColumns(20);
+        textarea293ajto.setRows(5);
+        textarea293ajto.setText("A három pár nedves lábnyomot követve\n az alagútnyugati elágazásában hamarosan \negy újabb el-ágazáshoz érsz. Ha továbbmész \nnyugat felé a lábnyomokat követve, nyisd ki a\n137-es ajtót. Ha inkább észak felé mész a \nharmadik pár lábnyom után, nyisd ki a \n387-est..");
+        jScrollPane6.setViewportView(textarea293ajto);
 
         jLabel28.setText("Választásod: ");
 
-        buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setText("387-es ajtó");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn387);
+        rdbtn387.setText("387-es ajtó");
+        rdbtn387.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                rdbtn387ActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton6);
-        jRadioButton6.setText("137-es ajtó");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn137);
+        rdbtn137.setText("137-es ajtó");
+        rdbtn137.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                rdbtn137ActionPerformed(evt);
             }
         });
 
@@ -743,17 +767,17 @@ public class Halallabirintus extends javax.swing.JFrame {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton5))
+                    .addComponent(rdbtn137)
+                    .addComponent(rdbtn387))
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton6)
+                .addComponent(rdbtn137)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton5)
+                .addComponent(rdbtn387)
                 .addContainerGap())
         );
 
@@ -882,9 +906,9 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea7.setColumns(20);
-        jTextArea7.setRows(5);
-        jScrollPane7.setViewportView(jTextArea7);
+        taskatartalma56.setColumns(20);
+        taskatartalma56.setRows(5);
+        jScrollPane7.setViewportView(taskatartalma56);
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -904,26 +928,26 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
-        jTextArea8.setColumns(20);
-        jTextArea8.setRows(5);
-        jTextArea8.setText("Látod, hogy az akadály egy széles, \nbarna, sziklaszerű tárgy. Megérinted, és \nmeglepve tapasztalod, hogy lágy, \nszivacsszerű. Ha át szeretnél mászni rajta,\nnyisd ki a 373-as ajtót. Ha ketté akarod \nvágni a kardoddal, nyisd ki a 215-öst.");
-        jScrollPane8.setViewportView(jTextArea8);
+        textarea56ajto.setColumns(20);
+        textarea56ajto.setRows(5);
+        textarea56ajto.setText("Látod, hogy az akadály egy széles, \nbarna, sziklaszerű tárgy. Megérinted, és \nmeglepve tapasztalod, hogy lágy, \nszivacsszerű. Ha át szeretnél mászni rajta,\nnyisd ki a 373-as ajtót. Ha ketté akarod \nvágni a kardoddal, nyisd ki a 215-öst.");
+        jScrollPane8.setViewportView(textarea56ajto);
 
         jLabel36.setText("Választásod: ");
 
-        buttonGroup1.add(jRadioButton7);
-        jRadioButton7.setText("215-ös ajtó");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn215);
+        rdbtn215.setText("215-ös ajtó");
+        rdbtn215.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                rdbtn215ActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(jRadioButton8);
-        jRadioButton8.setText("373-as ajtó");
-        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(rdbtn373);
+        rdbtn373.setText("373-as ajtó");
+        rdbtn373.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton8ActionPerformed(evt);
+                rdbtn373ActionPerformed(evt);
             }
         });
 
@@ -934,17 +958,17 @@ public class Halallabirintus extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton7))
+                    .addComponent(rdbtn373)
+                    .addComponent(rdbtn215))
                 .addContainerGap())
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton8)
+                .addComponent(rdbtn373)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton7)
+                .addComponent(rdbtn215)
                 .addContainerGap())
         );
 
@@ -1051,92 +1075,267 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("56-os ajtó", jPanel17);
 
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/halallabirintus/gyozelem_felirat.jpg"))); // NOI18N
-
-        jButton3.setText("Vissza a kezdőlapra");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        visszakezdolapra137.setText("Vissza a kezdőlapra");
+        visszakezdolapra137.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                visszakezdolapra137MouseClicked(evt);
             }
         });
 
-        jButton15.setText("Kilépés");
-        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
+        kilepes137.setText("Kilépés");
+        kilepes137.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton15MouseClicked(evt);
+                kilepes137MouseClicked(evt);
             }
         });
+
+        jPanel27.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
+
+        textarea137ajto.setColumns(20);
+        textarea137ajto.setRows(5);
+        jScrollPane9.setViewportView(textarea137ajto);
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addComponent(jScrollPane9)
+                .addContainerGap())
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addContainerGap(252, Short.MAX_VALUE)
+                .addComponent(visszakezdolapra137)
+                .addGap(30, 30, 30)
+                .addComponent(kilepes137, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
             .addGroup(jPanel23Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
+                .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(30, 30, 30)
-                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel23Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton15))
+                    .addComponent(visszakezdolapra137)
+                    .addComponent(kilepes137))
                 .addGap(29, 29, 29))
         );
 
         jTabbedPane1.addTab("137-es ajtó", jPanel23);
 
+        jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
+
+        textarea387ajto.setColumns(20);
+        textarea387ajto.setRows(5);
+        jScrollPane12.setViewportView(textarea387ajto);
+
+        textarea387ajto2.setColumns(20);
+        textarea387ajto2.setRows(5);
+        jScrollPane13.setViewportView(textarea387ajto2);
+
+        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
+        jPanel30.setLayout(jPanel30Layout);
+        jPanel30Layout.setHorizontalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel30Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
+                    .addComponent(jScrollPane13))
+                .addContainerGap())
+        );
+        jPanel30Layout.setVerticalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel30Layout.createSequentialGroup()
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        visszakezdolapra387.setText("Vissza a kezdőlapra");
+        visszakezdolapra387.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                visszakezdolapra387MouseClicked(evt);
+            }
+        });
+
+        kilepes387.setText("Kilépés");
+        kilepes387.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                kilepes387MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(visszakezdolapra387)
+                .addGap(18, 18, 18)
+                .addComponent(kilepes387, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 306, Short.MAX_VALUE)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(visszakezdolapra387)
+                    .addComponent(kilepes387))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("387-es ajtó", jPanel24);
+
+        jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
+
+        textarea373ajto.setColumns(20);
+        textarea373ajto.setRows(5);
+        jScrollPane10.setViewportView(textarea373ajto);
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        visszakezdolapra373.setText("Vissza a kezdőlapra");
+        visszakezdolapra373.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                visszakezdolapra373MouseClicked(evt);
+            }
+        });
+
+        kilepes373.setText("Kilépés");
+        kilepes373.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                kilepes373MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(visszakezdolapra373)
+                .addGap(30, 30, 30)
+                .addComponent(kilepes373, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 306, Short.MAX_VALUE)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(visszakezdolapra373)
+                    .addComponent(kilepes373))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("373-as ajtó", jPanel25);
+
+        jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
+
+        textarea215ajto.setColumns(20);
+        textarea215ajto.setRows(5);
+        jScrollPane11.setViewportView(textarea215ajto);
+
+        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
+        jPanel29.setLayout(jPanel29Layout);
+        jPanel29Layout.setHorizontalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane11)
+                .addContainerGap())
+        );
+        jPanel29Layout.setVerticalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        visszakezdolapra215.setText("Vissza a kezdőlapra");
+        visszakezdolapra215.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                visszakezdolapra215MouseClicked(evt);
+            }
+        });
+
+        kilepes215.setText("Kilépés");
+        kilepes215.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                kilepes215MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
         jPanel26Layout.setHorizontalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
+                .addGap(0, 225, Short.MAX_VALUE)
+                .addComponent(visszakezdolapra215)
+                .addGap(36, 36, 36)
+                .addComponent(kilepes215, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 306, Short.MAX_VALUE)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(visszakezdolapra215)
+                    .addComponent(kilepes215))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("215-ös ajtó", jPanel26);
@@ -1195,36 +1394,60 @@ public class Halallabirintus extends javax.swing.JFrame {
         kilepes();
     }//GEN-LAST:event_formWindowClosing
 
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+    private void rdbtn373ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn373ActionPerformed
         jTabbedPane1.setSelectedIndex(8);
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
+        textarea373ajto.setText("Fölmászol a lágy sziklára, attól tartasz, hogy bár-melyik pillanatban elnyelhet.\n Nehéz átvergődni rajta, mert puha anyagában alig tudod a lábadat emelni,\n de végül átvergődsz rajta. Megkönnyebbülten érsz újra szilárd talajra, és fordulsz\n kelet felé.\n Köszönjük, hogy résztvettél a játékban," + " " + jTextField1.getText() + "!" + " " + "A végére értél!");
+    }//GEN-LAST:event_rdbtn373ActionPerformed
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void rdbtn215ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn215ActionPerformed
         jTabbedPane1.setSelectedIndex(9);
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+        textarea215ajto.setText("Kardod könnyedén áthatol a spóragolyó vékonykülső burkán. Sűrű barna spórafelhő\n csap ki a golyóból, és körülvesz. Némelyik spóra a bőrödhöz tapad, és rettenetes\n viszketést okoz. Nagy daganatok nőnek az arcodon és karodon, és a bőröd mintha\n égne. 2 ÉLETERŐ pontot veszítesz. Vadul vakarózva átléped\n a leeresztett golyót, és keletnek veszed az utad.");
+        System.out.println("Új életerő = Jelenlegi életerőd - 2");
+    }//GEN-LAST:event_rdbtn215ActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void rdbtn137ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn137ActionPerformed
         jTabbedPane1.setSelectedIndex(6);
-        jLabel39.setText("Gratulálunk," + " " + jTextField1.getText() + "!" + " " + "A játék számora győzelemmel ért véget.");
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+        textarea137ajto.setText("Ahogy végigmész az alagúton, csodálkozva látod, hogy egy jókora vasharang csüng\n" +
+        "alá a boltozatról." + 
+        "\nKöszönjük, hogy játszottál, " + jTextField1.getText() + "!" + " " + "A játék itt ért véget.");
+    }//GEN-LAST:event_rdbtn137ActionPerformed
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void rdbtn387ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn387ActionPerformed
         jTabbedPane1.setSelectedIndex(7);
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+        int szorny_min = 1;
+        int szorny_max = 6;
+        int randomszam_szorny = (int)(Math.random()*(szorny_max - szorny_min +1))+szorny_min;
+        int szorny_tamadoero = randomszam_szorny + 7;
+        int sajat_min = 1;
+        int sajat_max = 6;
+        int sajat_tamadoero = (int)(Math.random()*(sajat_max - sajat_min +1))+sajat_min;
+        int sajat = sajat_tamadoero + ugyesseg;
+        textarea387ajto.setText("Hallod, hogy elölről súlyos lépések közelednek. Egy széles, állatbőrökbe\nöltözött, kőbaltás, primitívlény lép elő. Ahogy meglát, morog, a földre\nköp, majd a kőbaltát felemelve közeledik, és mindennek kinéz, csak barátságosnak\nnem. Előhúzod kardodat, és felkészülsz, hogy megküzdj a Barlangi Emberrel.\nBarlangi ember ügyessége = 7\nÉletereje = 7\nTámadóereje = " + szorny_tamadoero + "\nTe támadóerőd = " + sajat);
+        
+        if (sajat > szorny_tamadoero){
+            textarea387ajto2.setText("Sikerült megsebezned a szörnyet!");
+        }
+        else if(szorny_tamadoero > sajat){
+            textarea387ajto2.setText("A szörny megsebzett téged!");
+        }
+        else{
+            textarea387ajto2.setText("Kivédtétek egymás csapását!");
+        }
+    }//GEN-LAST:event_rdbtn387ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void rdbtn293ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn293ActionPerformed
         jTabbedPane1.setSelectedIndex(4);
-        jTextArea5.setText("Arany: 2");
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+        taskatartalma293ajto.setText("Arany: 2");
+    }//GEN-LAST:event_rdbtn293ActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void rdbtn56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn56ActionPerformed
         jTabbedPane1.setSelectedIndex(5);
-        jTextArea5.setText("Arany: 2");
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+        taskatartalma293ajto.setText("Arany: 2");
+    }//GEN-LAST:event_rdbtn56ActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        if (jRadioButton1.isSelected()){
-            jTextArea1.setText("A doboz teteje könnyedén nyílik. \n" +
+    private void rdbtn270ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn270ActionPerformed
+        if (rdbtn270.isSelected()){
+            textareakepessegek.setText("A doboz teteje könnyedén nyílik. \n" +
                 "Benne két aranypénzt találsz, és \n" +
                 "egy üzenetet, amely egy kis pergamenen \n" +
                 "neked szól. Előbb zsebre vágod az aranyakat,\n" +
@@ -1237,16 +1460,16 @@ public class Halallabirintus extends javax.swing.JFrame {
                 "Megjegyzed a tanácsot, apródarabokra téped \n" +
                 "a pergament, és tovább mészészak felé.\n" +
                 "Nyisd ki a 66-os ajtót.");
-            jTextArea2.setText("+2 arany");
-            if (jRadioButton1.isSelected()){
-                jTextArea3.setText("Arany: 2");
+            taskatartalmakepessegek.setText("+2 arany");
+            if (rdbtn270.isSelected()){
+                taskatartalmajatekfolytatasa.setText("Arany: 2");
             }
         }
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rdbtn270ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        if (jRadioButton2.isSelected()){
-            jTextArea1.setText("Néhány perc gyaloglás\n" +
+    private void rdbtn66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtn66ActionPerformed
+        if (rdbtn66.isSelected()){
+            textareakepessegek.setText("Néhány perc gyaloglás\n" +
                 "után egy elágazáshoz érsz az alagútban.\n" +
                 "Egy, a falra festett fehér nyíl nyugatfelé\n" +
                 "mutat. A földön nedves lábnyomok jelzik,\n" +
@@ -1257,35 +1480,64 @@ public class Halallabirintus extends javax.swing.JFrame {
                 "kívánsz menni, nyisd ki a 293-as ajtót.\n" +
                 "Ha keletnek, nyisd ki az 56-ost.");
         }
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_rdbtn66ActionPerformed
 
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+    private void tovabbkepessegekMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tovabbkepessegekMouseClicked
         jTabbedPane1.setSelectedIndex(3);
-    }//GEN-LAST:event_jButton8MouseClicked
+    }//GEN-LAST:event_tovabbkepessegekMouseClicked
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void tovabbkaraktervalasztasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tovabbkaraktervalasztasActionPerformed
         jTabbedPane1.setSelectedIndex(2);
-    }//GEN-LAST:event_jButton5ActionPerformed
+        int min = 1;
+        int max = 6;
+        int randomszam = (int)(Math.random()*(max - min +1))+min;
+        int ugyesseg = randomszam + 6;
+        System.out.println("Ügyesség =" + " " + ugyesseg);
+        int eletero = randomszam + randomszam + 12;
+        System.out.println("Életerő =" + " " + eletero);
+        int szerencse = randomszam + 6;
+        System.out.println("Szerencse =" + " " + szerencse);
+    }//GEN-LAST:event_tovabbkaraktervalasztasActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void kilepeskezdolapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kilepeskezdolapMouseClicked
         kilepes();
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_kilepeskezdolapMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jatekkezdeseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jatekkezdeseActionPerformed
         jTabbedPane1.setSelectedIndex(1);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jatekkezdeseActionPerformed
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void visszakezdolapra137MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visszakezdolapra137MouseClicked
         jTabbedPane1.setSelectedIndex(0);
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_visszakezdolapra137MouseClicked
 
-    private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
+    private void kilepes137MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kilepes137MouseClicked
         kilepes();
-    }//GEN-LAST:event_jButton15MouseClicked
+    }//GEN-LAST:event_kilepes137MouseClicked
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void kilepes373MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kilepes373MouseClicked
+        kilepes();
+    }//GEN-LAST:event_kilepes373MouseClicked
+
+    private void visszakezdolapra373MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visszakezdolapra373MouseClicked
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_visszakezdolapra373MouseClicked
+
+    private void visszakezdolapra215MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visszakezdolapra215MouseClicked
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_visszakezdolapra215MouseClicked
+
+    private void kilepes215MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kilepes215MouseClicked
+        kilepes();
+    }//GEN-LAST:event_kilepes215MouseClicked
+
+    private void visszakezdolapra387MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_visszakezdolapra387MouseClicked
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_visszakezdolapra387MouseClicked
+
+    private void kilepes387MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kilepes387MouseClicked
+        kilepes();
+    }//GEN-LAST:event_kilepes387MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1323,15 +1575,9 @@ public class Halallabirintus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea ajtovalasztas;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton ferfigomb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1363,8 +1609,6 @@ public class Halallabirintus extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
@@ -1397,22 +1641,22 @@ public class Halallabirintus extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1420,15 +1664,41 @@ public class Halallabirintus extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextArea jTextArea7;
-    private javax.swing.JTextArea jTextArea8;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton jatekkezdese;
+    private javax.swing.JButton kilepes137;
+    private javax.swing.JButton kilepes215;
+    private javax.swing.JButton kilepes373;
+    private javax.swing.JButton kilepes387;
+    private javax.swing.JButton kilepeskezdolap;
+    private javax.swing.JButton noigomb;
+    private javax.swing.JRadioButton rdbtn137;
+    private javax.swing.JRadioButton rdbtn215;
+    private javax.swing.JRadioButton rdbtn270;
+    private javax.swing.JRadioButton rdbtn293;
+    private javax.swing.JRadioButton rdbtn373;
+    private javax.swing.JRadioButton rdbtn387;
+    private javax.swing.JRadioButton rdbtn56;
+    private javax.swing.JRadioButton rdbtn66;
+    private javax.swing.JTextArea taskatartalma293ajto;
+    private javax.swing.JTextArea taskatartalma56;
+    private javax.swing.JTextArea taskatartalmajatekfolytatasa;
+    private javax.swing.JTextArea taskatartalmakepessegek;
+    private javax.swing.JTextArea textarea137ajto;
+    private javax.swing.JTextArea textarea215ajto;
+    private javax.swing.JTextArea textarea293ajto;
+    private javax.swing.JTextArea textarea373ajto;
+    private javax.swing.JTextArea textarea387ajto;
+    private javax.swing.JTextArea textarea387ajto2;
+    private javax.swing.JTextArea textarea56ajto;
+    private javax.swing.JTextArea textareakepessegek;
+    private javax.swing.JButton tovabbkaraktervalasztas;
+    private javax.swing.JButton tovabbkepessegek;
+    private javax.swing.JButton visszakezdolapra137;
+    private javax.swing.JButton visszakezdolapra215;
+    private javax.swing.JButton visszakezdolapra373;
+    private javax.swing.JButton visszakezdolapra387;
     // End of variables declaration//GEN-END:variables
 }
