@@ -42,6 +42,9 @@ public class Halallabirintus extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jatekkezdese = new javax.swing.JButton();
@@ -246,6 +249,8 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jLabel4.setText("Karaktered neve: ");
 
+        jTextField1.setToolTipText("");
+
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/halallabirintus/ferfi1.jpg"))); // NOI18N
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/halallabirintus/no1.jpg"))); // NOI18N
@@ -344,6 +349,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        taskatartalmakepessegek.setEditable(false);
         taskatartalmakepessegek.setColumns(20);
         taskatartalmakepessegek.setRows(5);
         jScrollPane2.setViewportView(taskatartalmakepessegek);
@@ -366,6 +372,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textareakepessegek.setEditable(false);
         textareakepessegek.setColumns(20);
         textareakepessegek.setRows(5);
         textareakepessegek.setText("Egy versenyre nevezel, aminek a lényege, \nhogy át kell kelni a halállabirintuson. \nA labirintusban tárgyakat találhatsz és \nszörnyekkel kell harcoljál.");
@@ -380,7 +387,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jLabel12.setText("Választásod: ");
 
-        buttonGroup1.add(rdbtn66);
+        buttonGroup4.add(rdbtn66);
         rdbtn66.setText("66-os ajtó");
         rdbtn66.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -388,7 +395,7 @@ public class Halallabirintus extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(rdbtn270);
+        buttonGroup4.add(rdbtn270);
         rdbtn270.setText("270-es ajtó");
         rdbtn270.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -525,6 +532,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        taskatartalmajatekfolytatasa.setEditable(false);
         taskatartalmajatekfolytatasa.setColumns(20);
         taskatartalmajatekfolytatasa.setRows(5);
         jScrollPane3.setViewportView(taskatartalmajatekfolytatasa);
@@ -547,6 +555,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        ajtovalasztas.setEditable(false);
         ajtovalasztas.setColumns(20);
         ajtovalasztas.setRows(5);
         ajtovalasztas.setText("Válassz egy ajtót!");
@@ -715,6 +724,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        taskatartalma293ajto.setEditable(false);
         taskatartalma293ajto.setColumns(20);
         taskatartalma293ajto.setRows(5);
         jScrollPane5.setViewportView(taskatartalma293ajto);
@@ -737,6 +747,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textarea293ajto.setEditable(false);
         textarea293ajto.setColumns(20);
         textarea293ajto.setRows(5);
         textarea293ajto.setText("A három pár nedves lábnyomot követve\n az alagútnyugati elágazásában hamarosan \negy újabb el-ágazáshoz érsz. Ha továbbmész \nnyugat felé a lábnyomokat követve, nyisd ki a\n137-es ajtót. Ha inkább észak felé mész a \nharmadik pár lábnyom után, nyisd ki a \n387-est..");
@@ -744,7 +755,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jLabel28.setText("Választásod: ");
 
-        buttonGroup1.add(rdbtn387);
+        buttonGroup2.add(rdbtn387);
         rdbtn387.setText("387-es ajtó");
         rdbtn387.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -752,7 +763,7 @@ public class Halallabirintus extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(rdbtn137);
+        buttonGroup2.add(rdbtn137);
         rdbtn137.setText("137-es ajtó");
         rdbtn137.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -906,6 +917,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "A táska tartalma: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        taskatartalma56.setEditable(false);
         taskatartalma56.setColumns(20);
         taskatartalma56.setRows(5);
         jScrollPane7.setViewportView(taskatartalma56);
@@ -928,6 +940,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel20.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textarea56ajto.setEditable(false);
         textarea56ajto.setColumns(20);
         textarea56ajto.setRows(5);
         textarea56ajto.setText("Látod, hogy az akadály egy széles, \nbarna, sziklaszerű tárgy. Megérinted, és \nmeglepve tapasztalod, hogy lágy, \nszivacsszerű. Ha át szeretnél mászni rajta,\nnyisd ki a 373-as ajtót. Ha ketté akarod \nvágni a kardoddal, nyisd ki a 215-öst.");
@@ -935,7 +948,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jLabel36.setText("Választásod: ");
 
-        buttonGroup1.add(rdbtn215);
+        buttonGroup3.add(rdbtn215);
         rdbtn215.setText("215-ös ajtó");
         rdbtn215.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -943,7 +956,7 @@ public class Halallabirintus extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(rdbtn373);
+        buttonGroup3.add(rdbtn373);
         rdbtn373.setText("373-as ajtó");
         rdbtn373.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1091,6 +1104,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel27.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textarea137ajto.setEditable(false);
         textarea137ajto.setColumns(20);
         textarea137ajto.setRows(5);
         jScrollPane9.setViewportView(textarea137ajto);
@@ -1140,10 +1154,12 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel30.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textarea387ajto.setEditable(false);
         textarea387ajto.setColumns(20);
         textarea387ajto.setRows(5);
         jScrollPane12.setViewportView(textarea387ajto);
 
+        textarea387ajto2.setEditable(false);
         textarea387ajto2.setColumns(20);
         textarea387ajto2.setRows(5);
         jScrollPane13.setViewportView(textarea387ajto2);
@@ -1213,6 +1229,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textarea373ajto.setEditable(false);
         textarea373ajto.setColumns(20);
         textarea373ajto.setRows(5);
         jScrollPane10.setViewportView(textarea373ajto);
@@ -1279,6 +1296,7 @@ public class Halallabirintus extends javax.swing.JFrame {
 
         jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Halállabirintus", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe Script", 1, 18))); // NOI18N
 
+        textarea215ajto.setEditable(false);
         textarea215ajto.setColumns(20);
         textarea215ajto.setRows(5);
         jScrollPane11.setViewportView(textarea215ajto);
@@ -1373,6 +1391,9 @@ public class Halallabirintus extends javax.swing.JFrame {
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName("Kezdőlap");
+        jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
 
         pack();
         setLocationRelativeTo(null);
@@ -1577,6 +1598,9 @@ public class Halallabirintus extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea ajtovalasztas;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JButton ferfigomb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

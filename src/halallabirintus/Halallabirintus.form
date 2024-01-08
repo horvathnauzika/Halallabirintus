@@ -4,6 +4,12 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup4">
+    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -81,6 +87,10 @@
       <Properties>
         <Property name="selectedIndex" type="int" value="3"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Kezd&#x151;lap"/>
+        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+      </AccessibilityProperties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -304,6 +314,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField1">
+                  <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel40">
                   <Properties>
@@ -489,6 +502,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="taskatartalmakepessegek">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
@@ -559,6 +573,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="textareakepessegek">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                         <Property name="text" type="java.lang.String" value="Egy versenyre nevezel, aminek a l&#xe9;nyege, &#xa;hogy &#xe1;t kell kelni a hal&#xe1;llabirintuson. &#xa;A labirintusban t&#xe1;rgyakat tal&#xe1;lhatsz &#xe9;s &#xa;sz&#xf6;rnyekkel kell harcolj&#xe1;l."/>
@@ -610,7 +625,7 @@
                     <Component class="javax.swing.JRadioButton" name="rdbtn66">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="buttonGroup1"/>
+                          <ComponentRef name="buttonGroup4"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="66-os ajt&#xf3;"/>
                       </Properties>
@@ -621,7 +636,7 @@
                     <Component class="javax.swing.JRadioButton" name="rdbtn270">
                       <Properties>
                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                          <ComponentRef name="buttonGroup1"/>
+                          <ComponentRef name="buttonGroup4"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="270-es ajt&#xf3;"/>
                       </Properties>
@@ -830,6 +845,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="taskatartalmajatekfolytatasa">
                           <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                           </Properties>
@@ -893,6 +909,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="ajtovalasztas">
                           <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="V&#xe1;lassz egy ajt&#xf3;t!"/>
@@ -1158,6 +1175,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="taskatartalma293ajto">
                           <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                           </Properties>
@@ -1223,6 +1241,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="textarea293ajto">
                           <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="A h&#xe1;rom p&#xe1;r nedves l&#xe1;bnyomot k&#xf6;vetve&#xa; az alag&#xfa;tnyugati el&#xe1;gaz&#xe1;s&#xe1;ban hamarosan &#xa;egy &#xfa;jabb el-&#xe1;gaz&#xe1;shoz &#xe9;rsz. Ha tov&#xe1;bbm&#xe9;sz &#xa;nyugat fel&#xe9; a l&#xe1;bnyomokat k&#xf6;vetve, nyisd ki a&#xa;137-es ajt&#xf3;t. Ha ink&#xe1;bb &#xe9;szak fel&#xe9; m&#xe9;sz a &#xa;harmadik p&#xe1;r l&#xe1;bnyom ut&#xe1;n, nyisd ki a &#xa;387-est.."/>
@@ -1266,7 +1285,7 @@
                         <Component class="javax.swing.JRadioButton" name="rdbtn387">
                           <Properties>
                             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                              <ComponentRef name="buttonGroup1"/>
+                              <ComponentRef name="buttonGroup2"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="387-es ajt&#xf3;"/>
                           </Properties>
@@ -1277,7 +1296,7 @@
                         <Component class="javax.swing.JRadioButton" name="rdbtn137">
                           <Properties>
                             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                              <ComponentRef name="buttonGroup1"/>
+                              <ComponentRef name="buttonGroup2"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="137-es ajt&#xf3;"/>
                           </Properties>
@@ -1488,6 +1507,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="taskatartalma56">
                           <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                           </Properties>
@@ -1548,6 +1568,7 @@
                       <SubComponents>
                         <Component class="javax.swing.JTextArea" name="textarea56ajto">
                           <Properties>
+                            <Property name="editable" type="boolean" value="false"/>
                             <Property name="columns" type="int" value="20"/>
                             <Property name="rows" type="int" value="5"/>
                             <Property name="text" type="java.lang.String" value="L&#xe1;tod, hogy az akad&#xe1;ly egy sz&#xe9;les, &#xa;barna, sziklaszer&#x171; t&#xe1;rgy. Meg&#xe9;rinted, &#xe9;s &#xa;meglepve tapasztalod, hogy l&#xe1;gy, &#xa;szivacsszer&#x171;. Ha &#xe1;t szeretn&#xe9;l m&#xe1;szni rajta,&#xa;nyisd ki a 373-as ajt&#xf3;t. Ha kett&#xe9; akarod &#xa;v&#xe1;gni a kardoddal, nyisd ki a 215-&#xf6;st."/>
@@ -1591,7 +1612,7 @@
                         <Component class="javax.swing.JRadioButton" name="rdbtn215">
                           <Properties>
                             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                              <ComponentRef name="buttonGroup1"/>
+                              <ComponentRef name="buttonGroup3"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="215-&#xf6;s ajt&#xf3;"/>
                           </Properties>
@@ -1602,7 +1623,7 @@
                         <Component class="javax.swing.JRadioButton" name="rdbtn373">
                           <Properties>
                             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                              <ComponentRef name="buttonGroup1"/>
+                              <ComponentRef name="buttonGroup3"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="373-as ajt&#xf3;"/>
                           </Properties>
@@ -1714,6 +1735,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="textarea137ajto">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
@@ -1811,6 +1833,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="textarea387ajto">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
@@ -1826,6 +1849,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="textarea387ajto2">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
@@ -1935,6 +1959,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="textarea373ajto">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
@@ -2041,6 +2066,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JTextArea" name="textarea215ajto">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
